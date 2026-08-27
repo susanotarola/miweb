@@ -7,7 +7,7 @@
 
 /* ---------- Variables ---------- */
 :root {
-  --violet:    #000000;
+  --violet:    #391d4d;
   --red:       #dd3149;
   --sage:      #89a8a3;
   --ivory:     #ededed;
@@ -67,6 +67,7 @@ p { font-family: var(--ff-body); font-weight: 300; }
 .btn-so {
    border-radius: 30px; /* esquinas bien redondeadas, estilo píldora */
   display: inline-block;
+  width: fit-content;
   padding: 0.75rem 2rem;
   border: 2px solid var(--red);
   color: var(--red);
@@ -133,12 +134,15 @@ html.font-medium { font-size: 16px; }
 html.font-large { font-size: 19px; }
 
 #navbar {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 1.2rem 0;
-  background: var(--ivory);
-  transition: background var(--transition), padding var(--transition);
+  position: sticky; /* O fixed según el comportamiento que uses */
+  top: 0;
+  z-index: 1030;
+  width: 100%;
+  padding: 15px 0 !important; /* Da espacio suficiente para que el texto no se corte */
+  min-height: 70px; /* Asegura una altura mínima adecuada */
+  background-color: #ffffff;
+  overflow: visible !important; /* Evita que recorte elementos hijos */
+  transition: all 0.3s ease;
 }
 
 #navbar.scrolled {
@@ -156,6 +160,16 @@ html.font-large { font-size: 19px; }
 
 .navbar-brand-so span {
   color: var(--red);
+}
+/* Elementos del menú y logo */
+.navbar-brand img {
+  height: 40px !important; /* Altura adecuada para el logo */
+  width: auto;
+}
+.navbar-nav .nav-link {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav .nav-link {
@@ -188,8 +202,6 @@ html.font-large { font-size: 19px; }
   background-position: center top;
   background-attachment: fixed;
 }
-
-.hero-parallax-bg { display: none; }
 
 .hero-overlay {
   position: absolute;
@@ -291,7 +303,7 @@ html.font-large { font-size: 19px; }
   z-index: -1;
 }
 
-.sobre-mi-texto h2 { color: var(--violet); margin-bottom: 1.2rem; }
+.sobre-mi-texto h2 { color:#391d4d;margin-bottom: 1.2rem; }
 .sobre-mi-texto p   { color: #444; margin-bottom: 1rem; }
 
 .sobre-mi-pillars {
@@ -322,7 +334,18 @@ html.font-large { font-size: 19px; }
   background-attachment: fixed;
 }
 
-.servicios-parallax-bg { display: none; }
+.servicios-parallax-bg { 
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background-image: url('files/tu-imagen-de-fondo.jpg'); /* Opcional */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  will-change: transform;
+}
 
 .servicios-overlay {
   position: absolute;
@@ -684,16 +707,15 @@ html.font-large { font-size: 19px; }
   color: #391d4d;
   transform: scale(1.05);
 }
+/* Barra accesible superior (botones A A A) */
 .top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1030;
+  position: relative;
+  z-index: 1040;
+  background-color: #f7f6f4;
+  padding: 6px 0;
   display: flex;
   justify-content: flex-end;
-  padding: 8px 24px;
-  background: #ededed;
+  align-items: center;
 }
 
 .logo-monograma {
@@ -715,3 +737,30 @@ html.font-large { font-size: 19px; }
   color: #ededed !important;
 }
 
+/* ---------- Portafolio Pituki ---------- */
+#elreto {
+  position: relative;
+  padding: 7rem 0;
+  background-image: url('portafolio/galleta/mockups/valla.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.elreto-parallax-bg { display: none; }
+
+.elreto-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(57,29,77,0.82);
+}
+
+.elreto-content { position: relative; z-index: 2; }
+
+.elreto-content .tag { color: var(--sage); }
+.elreto-content h2  { color: var(--ivory); margin-bottom: 0.5rem; }
+.elreto-content .intro {
+  color: var(--gray-mid);
+  font-size: 1rem;
+  max-width: 540px;
+  margin-bottom: 3.5rem;
