@@ -5,22 +5,6 @@
    Tipografía: Cormorant Garamond (display) + Jost (body/ui)
    ============================================================ */
 
-/* ---------- Variables ---------- */
-:root {
-  --violet:    #391d4d;
-  --red:       #dd3149;
-  --sage:      #89a8a3;
-  --ivory:     #ededed;
-  --gray-mid:  #d3d3d3;
-  --gray-dark: #b2b2b2;
-  --white:     #ffffff;
-  --black:     #111111;
-
-  --ff-display: 'Cormorant Garamond', Georgia, serif;
-  --ff-body:    'Jost', system-ui, sans-serif;
-
-  --transition: 0.3s ease;
-}
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,17 +24,58 @@ img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; text-decoration: none; }
 
-/* ---------- Tipografía ---------- */
-h1, h2, h3, h4 {
-  font-family: var(--ff-display);
-  font-weight: 600;
-  line-height: 1.15;
+/* ---------- Variables ---------- */
+:root {
+  --violet:    #391d4d;
+  --red:       #dd3149;
+  --sage:      #89a8a3;
+  --ivory:     #ededed;
+  --gray-mid:  #d3d3d3;
+  --gray-dark: #b2b2b2;
+  --white:     #ffffff;
+  --black:     #111111;
 
+  /* Asignamos Jost a todas las variables tipográficas */
+  --ff-display: 'Jost', system-ui, -apple-system, sans-serif;
+  --ff-body:    'Jost', system-ui, -apple-system, sans-serif;
+
+  --transition: 0.3s ease;
 }
 
-h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); }
-h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); color: var(--white); }
-h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+/* ---------- Regla Global para forzar Jost en todo el sitio ---------- */
+*, *::before, *::after, body, html {
+  font-family: var(--ff-body) !important;
+}
+
+/* ---------- Encabezados en Jost Bold (700) ---------- */
+h1, h2, h3, h4, h5, h6, 
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: var(--ff-display) !important;
+  font-weight: 700 !important;
+  line-height: 1.2;
+}
+/* Incremento de tamaño para el h1 manteniendo la adaptabilidad móvil */
+h1, .display-4 {
+  font-family: var(--ff-display) !important;
+  font-weight: 700 !important;
+  font-size: clamp(3.5rem, 8vw, 6.5rem) !important;
+  line-height: 1.05 !important;
+}
+
+/* ---------- Textos de cuerpo y párrafos ---------- */
+p, span, a, li, input, textarea, select, button, label {
+  font-family: var(--ff-body) !important;
+}
+
+/* Párrafos principales en peso regular (400) para excelente legibilidad */
+p {
+  font-weight: 400;
+}
+
+/* Párrafos destacados/lead */
+.lead {
+  font-weight: 300;
+}
 
 p { font-family: var(--ff-body); font-weight: 300; }
 
@@ -228,8 +253,6 @@ html.font-large { font-size: 19px; }
   color: var(--ivory);
   margin-bottom: 1.4rem;
   margin-top: 7rem;
-}
-
 }
 
 .hero-content h2 em {
@@ -514,7 +537,9 @@ html.font-large { font-size: 19px; }
   transition: border-color var(--transition);
 }
 
-.form-so .form-control::placeholder { color: var(--gray-dark); }
+.form-so .form-control::placeholder { color: rgba(255, 255, 255, 0.75) !important; 
+  opacity: 1; /* Asegura que los navegadores no le apliquen transparencia por defecto */
+}
 .form-so .form-control:focus,
 .form-so .form-select:focus {
   background: rgba(255,255,255,0.1);
@@ -764,3 +789,44 @@ html.font-large { font-size: 19px; }
   font-size: 1rem;
   max-width: 540px;
   margin-bottom: 3.5rem;
+
+}
+<style>
+  /* Color de fondo personalizado */
+  .bg-custom-light {
+    background-color: #ededed !important;
+  }
+
+  /* Ajuste de tarjetas de imágenes y video a la misma altura */
+  .media-card-celu {
+    height: 380px !important;
+    width: 100% !important;
+    object-fit: contain !important; /* Preserva la proporción del teléfono */
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  }
+
+  .media-card-valla {
+    height: 380px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  }
+
+  .video-card-equal {
+    height: 380px !important;
+    width: 100% !important;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  }
+
+  .video-card-equal iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+  }
+</style>

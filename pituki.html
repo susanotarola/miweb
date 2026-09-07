@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Pituki — Susan Otárola</title>
+  <meta name="description" content="Proyecto de packaging, branding y publicidad para Galletas Pituki." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Estilos de ajuste fino para este proyecto */
+    .bg-custom-light {
+      background-color: #ededed !important;
+    }
+
+    .badge-custom {
+      background-color: #ededed !important;
+      color: #391d4d !important;
+      font-weight: 600;
+    }
+
+    /* Regla para homogeneizar la galería de piezas (2 imágenes + 1 video) */
+    .media-card-equal {
+      height: 380px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .video-card-equal {
+      height: 380px;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .video-card-equal iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVBAR
+  ============================================= -->
+  <div class="top-bar">
+    <div class="font-size-control" aria-label="Ajustar tamaño de texto">
+      <button class="font-btn" data-size="small" aria-label="Tamaño de texto pequeño">A</button>
+      <button class="font-btn" data-size="medium" aria-label="Tamaño de texto mediano">A</button>
+      <button class="font-btn" data-size="large" aria-label="Tamaño de texto grande">A</button>
+    </div>
+  </div>
+  <nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="files/monograma-8.png" alt="Susan Otárola" style="height: 40px;" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#portafolio">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn-so px-3 py-1" href="#contacto">Conversemos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =============================================
+       HERO — Pituki
+  ============================================= -->
+  <section id="hero-pituki" class="position-relative py-5 style-hero-pituki" style="background-color: #391d4d;">
+    <div class="hero-parallax-bg" id="heroBg"
+      style="background-image: url('./portafolio/galleta/mockups/valla.png'); opacity: 0.25;"></div>
+    <div class="hero-overlay" style="background: #391d4d; opacity: 0.85;"></div>
+
+    <div class="container position-relative text-white py-5" style="z-index: 3;">
+      <div class="row align-items-center g-4">
+        <!-- Texto principal -->
+        <div class="col-lg-6 reveal">
+          <span class="badge badge-custom mb-3 px-3 py-2 fs-6">Packaging & Branding</span>
+          <h1 class="display-4 fw-bold text-white mb-3">Galletas Pituki</h1>
+          <p class="lead text-light">
+            Estrategia de marca, diseño de identidad visual y empaque para un producto infantil con alto impacto en
+            punto de venta.
+          </p>
+        </div>
+        <!-- Mockup PNG destacado -->
+        <div class="col-lg-6 text-center reveal">
+          <img src="./portafolio/galleta/mockups/mockup.png" alt="Empaque Pituki Galletas" class="img-fluid drop-shadow"
+            style="max-height: 400px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CASO DE ESTUDIO (EL RETO Y LA SOLUCIÓN)
+  ============================================= -->
+  <section id="elreto" class="py-5 bg-custom-light">
+    <div class="container py-4">
+
+      <!-- Encabezado de Sección -->
+      <!-- Encabezado de Sección con alta legibilidad -->
+<div class="row mb-4 reveal">
+  <div class="col-lg-8">
+    <div class="p-3 p-md-4 rounded-4 shadow-sm" style="background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(8px); display: inline-block;">
+      <p class="tag text-uppercase fw-bold mb-1" style="color: #391d4d; letter-spacing: 1px;">Caso de estudio</p>
+      <h2 class="display-6 fw-bold m-0" style="color: #391d4d; text-shadow: 0 1px 2px rgba(255,255,255,0.8);">Estrategia y Construcción de Marca</h2>
+    </div>
+  </div>
+</div>
+
+      <!-- Tarjetas: El Reto y La Solución -->
+      <div class="row g-4 g-lg-5">
+        <!-- Tarjeta 1: El Reto -->
+        <div class="col-md-6 reveal">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4"
+            style="border-color: #89a8a3 !important;">
+            <h3 class="h4 fw-bold mb-3" style="color: #391d4d;">El Reto</h3>
+            <p class="text-secondary leading-relaxed m-0">
+              Desarrollar una propuesta de empaque y posicionamiento para una nueva línea de galletas infantiles
+              rellenas de mantequilla de maní. El desafío principal consistía en lograr diferenciación inmediata en la
+              góndola ante marcas tradicionales, conectando emocionalmente con el público infantil sin perder la
+              confianza de los padres.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: La Solución -->
+        <div class="col-md-6 reveal">
+          <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4"
+            style="border-color: #89a8a3 !important;">
+            <h3 class="h4 fw-bold mb-3" style="color: #391d4d;">La Solución</h3>
+            <p class="text-secondary leading-relaxed m-0">
+              Diseñé una identidad gráfica vibrante con una paleta cromática cálida y expresiva (tonos naranja y
+              violeta) que evoca antojo y diversión. La tipografía del logotipo transmite personalidad juguetona, y el
+              empaque destaca claramente los atributos del producto: <em>"4 unidades"</em>, <em>"Cremosidad para los
+                antojos"</em> y la propuesta de ingredientes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       LO QUE INCLUYÓ EL PROYECTO y Overlay 30%)
+  ============================================= -->
+
+  <section id="servicios" class="position-relative py-5 text-white overflow-hidden">
+    <!-- 1. Fondo Parallax -->
+    <div class="servicios-parallax-bg" id="serviciosBg" style="background-image: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1600&q=80');">
+          </div>
+    
+    <!-- 2. Overlay morado difuminado al 30% -->
+    <div class="servicios-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(57, 29, 77, 0.30); z-index: 2; pointer-events: none;"></div>
+
+    <!-- 3. Contenido (Z-index por encima de la capa) -->
+    <div class="container position-relative py-4" style="z-index: 3;">
+      
+      <!-- Encabezado -->
+      <div class="row mb-5 reveal">
+        <div class="col-lg-7">
+          <p class="tag text-uppercase fw-bold mb-1" style="color: #ededed;">Alcance</p>
+          <h2 class="display-6 fw-bold text-white">Lo que incluyó el proyecto</h2>
+        </div>
+      </div>
+
+      <!-- Tarjetas de Alcance (3 columnas equitativas) -->
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="servicio-card h-100 p-4 rounded-4 shadow-sm bg-white text-dark">
+            <div class="servicio-icon fs-2 mb-3" style="color: #391d4d;"><i class="bi bi-lightbulb"></i></div>
+            <h3 class="h4 fw-bold mb-2" style="color: #391d4d;">Conceptualización</h3>
+            <p class="text-secondary m-0">Naming, definición de público meta, personalidad de marca.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="servicio-card h-100 p-4 rounded-4 shadow-sm bg-white text-dark">
+            <div class="servicio-icon fs-2 mb-3" style="color: #391d4d;"><i class="bi bi-box-seam"></i></div>
+            <h3 class="h4 fw-bold mb-2" style="color: #391d4d;">Diseño de Empaque</h3>
+            <p class="text-secondary m-0">Ideación del empaque, diagramación.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="servicio-card h-100 p-4 rounded-4 shadow-sm bg-white text-dark">
+            <div class="servicio-icon fs-2 mb-3" style="color: #391d4d;"><i class="bi bi-megaphone"></i></div>
+            <h3 class="h4 fw-bold mb-2" style="color: #391d4d;">Aplicaciones de Publicidad</h3>
+            <p class="text-secondary m-0">Mockups para publicidad exterior (vallas) y anuncio adaptado a Youtube.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================
+       CAMPAÑA VISUAL Y AUDIOVISUAL (UX Layout)
+  ============================================= -->
+  <section class="py-5 bg-custom-light">
+    <div class="container py-3">
+      
+      <!-- Encabezado -->
+      <div class="row mb-5 reveal">
+        <div class="col-lg-7">
+          <p class="tag text-uppercase fw-bold mb-1" style="color: #391d4d;">Materiales</p>
+          <h2 class="display-6 fw-bold m-0" style="color: #391d4d;">Campaña visual y audiovisual</h2>
+        </div>
+      </div>
+
+      <!-- BLOQUE 1: Piezas Horizontales (Valla + Video 16:9) -->
+      <div class="row g-4 mb-5 reveal align-items-stretch">
+        <!-- Valla Exterior -->
+        <div class="col-lg-6">
+          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
+              <img src="./portafolio/galleta/mockups/valla.png" alt="Publicidad Exterior Valla Pituki" style="object-fit: cover; width: 100%; height: 100%;" />
+            </div>
+            <p class="text-center text-muted small fw-semibold m-0 mt-2">Publicidad Exterior (Valla)</p>
+          </div>
+        </div>
+
+        <!-- Video de YouTube -->
+        <div class="col-lg-6">
+          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
+              <!-- Reemplaza TU_ID_DE_VIDEO con la ID real de YouTube -->
+              <iframe src="https://www.youtube.com/embed/crWSc_18nbc" title="Video de Campaña Pituki" allowfullscreen></iframe>
+            </div>
+            <p class="text-center text-muted small fw-semibold m-0 mt-2">Video Comercial de Campaña</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2: Pieza Vertical Móvil (Celular 9:16 + Descripción) -->
+      <div class="row g-4 reveal align-items-center bg-white p-4 rounded-4 shadow-sm mx-0">
+        <!-- Mockup Celular -->
+        <div class="col-md-5 col-lg-4 text-center">
+          <img src="./portafolio/galleta/mockups/celu.png" alt="Anuncio Instagram Stories Pituki" class="img-fluid rounded-4 drop-shadow" style="max-height: 480px; width: auto; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));" />
+        </div>
+
+        <!-- Explicación de la pieza digital -->
+        <div class="col-md-7 col-lg-8">
+          <span class="badge mb-2 px-3 py-2 fs-6" style="background-color: #391d4d; color: #ededed;">Estrategia Digital</span>
+          <h3 class="h4 fw-bold mb-3" style="color: #391d4d;">Formatos Verticales para Redes Sociales</h3>
+          <p class="text-secondary leading-relaxed mb-3">
+            Adaptación del sistema visual a formatos interactivos para canales digitales (Instagram Stories y Reels). La composición prioriza el llamado a la acción (*Call To Action*) en el tercio inferior de la pantalla para maximizar el clic y la conversión.
+          </p>
+          <ul class="list-unstyled text-secondary small m-0">
+            <li class="mb-1"><i class="bi bi-check2-circle me-2" style="color: #89a8a3;"></i> Optimizado para consumo rápido en dispositivos móviles.</li>
+            <li><i class="bi bi-check2-circle me-2" style="color: #89a8a3;"></i> Resalta la propuesta de valor: <em>"Cremosidad para los antojos".</em></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- =============================================
+       PORTAFOLIO (Navegación entre proyectos)
+  ============================================= -->
+  <section id="portafolio" class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-7">
+          <p class="tag">Explora más</p>
+          <h2 style="color:#391d4d;">Otros proyectos</h2>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="portafolio/comaqui/portada.png" alt="Identidad visual — Comaqui Restaurant" />
+            <div class="portfolio-overlay">
+              <a href="comaqui.html" class="btn-so btn-so--light">App Comaqui restaurant</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="portafolio/facilyrico/anuncio.jpg" alt="App reservaciones gastronómicas" />
+            <div class="portfolio-overlay">
+              <a href="facilyrico.html" class="btn-so btn-so--light">App reservaciones gastronómicas</a>
+            </div>
+          </div>
+        </div>
+
+       <!-- Card 6 — Placeholder -->
+        <div class="col-md-6 col-lg-4 reveal d-flex align-items-stretch">
+          <div class="w-100 d-flex flex-column align-items-center justify-content-center text-center p-4"
+            style="border: 2px dashed var(--gray-mid); min-height: 240px;">
+                 <p class="tag mb-2" style="color: #391d4d !important; font-weight: 600;">Próximamente</p>
+            <p style="color:#391d4d; font-size:0.9rem;">
+              Nuevo proyecto en proceso.<br />¿Será el tuyo?
+            </p>
+            <a href="#contacto" class="btn-so mt-3">Conversemos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CONTACTO — Parallax CTA
+  ============================================= -->
+  <section id="contacto">
+    <div class="contacto-parallax-bg" id="contactoBg"></div>
+    <div class="contacto-overlay"></div>
+
+    <div class="container contacto-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 reveal">
+          <p class="tag">¿Listo para empezar?</p>
+          <h2>Cuéntame tu proyecto</h2>
+          <p>
+            Cada marca tiene una historia única. Cuéntame la tuya y
+            trabajemos juntos para que el mundo la entienda y la recuerde.
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulario sustituir tu sitio-->
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-7 reveal">
+          <form class="form-so" action="https://formspree.io/f/meeblqqq" method="POST">
+            <input type="hidden" name="_subject" value="Nuevo contacto desde tu web" />
+            <input type="hidden" name="_next" value="https://tusitio.com/#gracias" />
+
+            <div class="row g-3">
+
+              <div class="col-sm-6">
+                <label class="form-label" for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              </div>
+
+              <div class="col-sm-6">
+                <label class="form-label" for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="tu@correo.com" required />
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="servicio">¿Qué necesitas?</label>
+                <select class="form-select" id="servicio" name="servicio">
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option>Diseño Gráfico UX/UI</option>
+                  <option>Diseño de Identidad Visual</option>
+                  <option>Locución / Voz Profesional</option>
+                  <option>Varios </option>
+                  <option>No sé por dónde empezar</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="mensaje">Cuéntame</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
+                  placeholder="Describe brevemente tu proyecto o necesidad…" required></textarea>
+              </div>
+
+              <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn-so btn-so--filled px-5">
+                  Enviar mensaje
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-brand">S<span>O</span></div>
+      <div class="footer-social my-2">
+        <a href="https://www.linkedin.com/in/susanotarola" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <i class="bi bi-youtube"></i>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+      </div>
+      <p class="footer-copy">
+        © 2026 Susan Otárola Jiménez · Diseño gráfico UX/UI · Identidad visual · Locución profesional
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       SCRIPTS
+  ============================================= -->
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    /* ---- Navbar: se vuelve sólida al hacer scroll ---- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ---- Parallax suave en capas de fondo ---- */
+    const heroBg = document.getElementById('heroBg');
+    const serviciosBg = document.getElementById('serviciosBg');
+    const contactoBg = document.getElementById('contactoBg');
+
+    function applyParallax(el, factor) {
+      if (!el) return;
+      const rect = el.parentElement.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+      const offset = (window.innerHeight / 2 - center) * factor;
+      el.style.transform = `translateY(${offset}px)`;
+    }
+
+    window.addEventListener('scroll', () => {
+      applyParallax(heroBg, 0.35);
+      applyParallax(serviciosBg, 0.25);
+      applyParallax(contactoBg, 0.25);
+    }, { passive: true });
+
+    /* ---- Scroll reveal ---- */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    /* ---- Active nav link al hacer scroll ---- */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+      });
+    }, { passive: true });
+  </script>
+
+  <script>
+    const fontButtons = document.querySelectorAll('.font-btn');
+    const html = document.documentElement;
+
+    const savedSize = localStorage.getItem('fontSize') || 'medium';
+    html.classList.add('font-' + savedSize);
+    document.querySelector(`.font-btn[data-size="${savedSize}"]`)?.classList.add('active');
+
+    fontButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const size = btn.dataset.size;
+
+        html.classList.remove('font-small', 'font-medium', 'font-large');
+        html.classList.add('font-' + size);
+
+        fontButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        localStorage.setItem('fontSize', size);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
