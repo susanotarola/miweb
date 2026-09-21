@@ -8,12 +8,14 @@
   <meta name="description" content="Traduzco lo que ya eres. Ayudo a organizaciones y marcas personales a transmitir su valor mediante técnicas de comunicación, diseño y locución profesional. 
     para que sean entendidas y recordadas." />
 
-    <!-- Google Fonts (Solo Jost en todos sus pesos) -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts (Solo Jost en todos sus pesos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
 
-   <!-- Bootstrap 5 CSS -->
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Bootstrap Icons -->
@@ -50,9 +52,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav gap-1">
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
           <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
           <li class="nav-item ms-lg-2">
             <a class="nav-link btn-so px-3 py-1" href="#contacto">Conversemos</a>
           </li>
@@ -70,81 +71,99 @@
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
-      <div class="row">
-        <div class="col-lg-8 col-xl-7">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
 
           <h2>
             Hago que tu marca se vea, se entienda y transmita su verdadero valor
           </h2>
 
+        </div>
 
-          <p class="lead">
-            Ayudo a marcas, empresas y proyectos independientes a conectar con sus clientes mediante el diseño de
-            interfaces (UX/UI), la identidad visual y la redacción estratégica de contenidos.
-          </p>
+        <div class="col-lg-5">
+          <div class="hero-foto">
+            <!--
+              REEMPLAZA este src con tu foto real.
+              Ejemplo: src="./files/susan-hero.jpg"
+            -->
 
+          </div>
         </div>
       </div>
     </div>
 
   </section>
 
-<!-- =============================================
+  <!-- =============================================
        SERVICIOS + PROCESO — Parallax strip
   ============================================= -->
   <section id="servicios">
     <!-- Capa de imagen Parallax -->
-    <div class="servicios-parallax-bg" id="serviciosBg" style="background-image: url('./galleta/fotomodelo.png');"></div>
+    <div class="servicios-parallax-bg" id="serviciosBg" style="background-image: url('./galleta/fotomodelo.png');">
+    </div>
     <!-- Capa oscura de superposición (Overlay) -->
     <div class="servicios-overlay"></div>
 
     <div class="container servicios-content">
-      
+
       <!-- ENCABEZADO DE SERVICIOS -->
       <div class="row mb-5 reveal">
         <div class="col-lg-7">
-          <p class="tag" style="color: var(--sage);">Lo que hago</p>
           <h2 class="text-white">Servicios</h2>
           <p class="intro text-light">
-            Soluciones integrales de diseño y comunicación.
-            Cada servicio se adapta a las necesidades de tu proyecto o se integra en un sistema completo.
+            Ayudo a marcas, empresas y proyectos independientes a conectar con sus clientes mediante el diseño de
+            interfaces (UX/UI), identidad visual, piezas audiovisuales y redacción de contenidos.
           </p>
         </div>
       </div>
 
       <!-- TARJETAS DE SERVICIOS -->
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="servicio-card">
-            <div class="servicio-icon"><i class="bi bi-window"></i></div>
-            <h3 class="text-white">Diseño Gráfico UX/UI</h3>
-            <p class="text-light">Diseño de sitios web, landing pages e interfaces de apps. Enfocadas en usabilidad y claridad para que tus usuarios naveguen sin esfuerzo.</p>
+      <div class="row g-4 justify-content-center">
+         <!-- EMPRESAS -->
+        <div class="col-md-6 col-lg-6 reveal">
+<a href="empresas.html" class="text-decoration-none">
+          <div class="servicio-card H-100 p-4 rounded-4 shadow-sm text-dark">
+            <div class="servicio-icon"><i class="bi bi-mic"></i></div>
+            <h3 class="text-white">Comunicación para empresas</h3>
+            <ul class="text-light ps-3 mb-0">
+              <li>Capacitación sobre cómo hablar en público: mejora la expresión oral de tus colaboradores
+                utilizando principios de locución y estructuración de mensajes
+                utilizando técnicas de comunicación.</li>
+              <li>Diseño web y aplicaciones centradas en la conversión:
+                te ayudo a estructurar la información para que tus plataformas sean comprensibles
+                y fáciles de usar para que tus clientes no se pierdan
+                ni abandonen la compra.
+              </li>
+            </ul>
           </div>
+        </a>
         </div>
-
-        <div class="col-md-6 col-lg-4 reveal">
+<!-- Tarjeta 2: Emprendedores y Marcas Personales -->
+        <div class="col-md-6 col-lg-6 reveal">
+          <a href="pituki.html" class="text-decoration-none">
           <div class="servicio-card">
             <div class="servicio-icon"><i class="bi bi-palette"></i></div>
-            <h3 class="text-white">Identidad Visual & Branding</h3>
-            <p class="text-light">Sistemas visuales completos: manual de marca, paleta de colores, tipografías y piezas digitales para que tu presencia se vea profesional y coherente.</p>
+            <h3 class="text-white">Comunicación para emprendedores y marcas personales</h3>
+            <ul class="text-light ps-3 mb-0">
+              <li>Estructuración del mensaje: te ayudo a estructurar el mensaje que expones en tus presentaciones, sitio
+                web y redes sociales.</li>
+              <li>Diseño de identidad visual: diseño tu marca (análisis de colores, estilo y logo) para que tu negocio
+                se vea profesional y transmita credibilidad.</li>
+              <li>Videos promocionales con voz profesional: ¿Quieres que tu marca cuente con producción
+                audiovisual? Te entrego el producto final creado
+                con un guion profesional y voz humana para enganchar a tu audiencia desde el primer segundo.
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="servicio-card">
-            <div class="servicio-icon"><i class="bi bi-mic"></i></div>
-            <h3 class="text-white">Redacción, Voz & Contenido Digital</h3>
-            <p class="text-light">Guiones, edición de video digital (Premiere) y locución profesional para dotar a tu marca de un mensaje claro y un tono de voz creíble.</p>
-          </div>
+          </a>
         </div>
       </div>
 
-      <!-- ---- Proceso (fondo claro) ---- -->
+      <!-- ---- COMO TRABAJO (fondo claro) ---- -->
       <div class="proceso-wrap mt-5 pt-5">
         <div class="row mb-4 reveal">
           <div class="col-lg-10">
-            <p class="tag">Cómo trabajo</p>
-            <h2 style="color:#391d4d;">Mi proceso</h2>
+            <h2 style="color:#391d4d;">¿Cómo trabajo?</h2>
           </div>
         </div>
 
@@ -157,8 +176,9 @@
                 <h3>Escucho y descubro</h3>
                 <p>
                   Antes de proponer cualquier solución entiendo quién eres,
-                  a quién le hablas y qué quieres lograr. Esta fase incluye una entrevista
-                  profunda, revisión de materiales existentes y diagnóstico honesto.
+                  a quién le hablas y qué quieres lograr. Esta fase incluye una entrevista,
+                  revisión de materiales existentes y diagnóstico honesto, importantes para
+                  definir el presupuesto y cronograma.
                 </p>
               </div>
             </div>
@@ -168,10 +188,9 @@
               <div class="paso-body">
                 <h3>Diseño tu sistema de comunicación</h3>
                 <p>
-                  Combino el diseño de interfaz (UX), identidad visual y
-                  mensaje en un sistema coherente.
-                  Cada pieza (web, branding, video o voz)
-                  cumple un propósito claro para generar credibilidad.
+                  Combino técnicas de comunicación y diseño gráfico
+                  para sugerir la identidad visual, estilo,
+                  mensaje y piezas (web, branding, video o voz) para conformar un sistema coherente.
                 </p>
               </div>
             </div>
@@ -181,8 +200,8 @@
               <div class="paso-body">
                 <h3>Entrega y autonomía</h3>
                 <p>
-                  Entrego materiales listos para usar y la guía para que
-                  puedas aplicarlos con total independencia.
+                  Cuando estés satisfecho con el resultado, entrego materiales listos para usar y la guía para que
+                  puedas aplicarlos con total independencia si prefieres.
                 </p>
               </div>
             </div>
@@ -192,6 +211,61 @@
       </div>
     </div>
   </section>
+  <!-- =============================================
+       PORTAFOLIO
+  ============================================= -->
+  <section id="portafolio">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-7">
+          <h2 style="color:#391d4d;">Veamos algunos ejemplos </h2>
+        </div>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="./files/reunion.png" alt="Identidad visual — Comaqui Restaurant" />
+            <div class="portfolio-overlay">
+              <a href="empresas.html" target="_blank" class="btn-so btn-so--light">Comunicación para empresas </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="./files/fotomodelo.png" alt="Pituki — Empaque y branding" />
+            <div class="portfolio-overlay">
+              <a href="pituki.html" target="_blank" class="btn-so btn-so--light">Comunicación para marca
+                emprendedora</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Card 6 — Placeholder -->
+        <div class="col-md-6 col-lg-4 reveal d-flex align-items-stretch">
+          <div class="w-100 d-flex flex-column align-items-center justify-content-center text-center p-4"
+            style="border: 2px dashed var(--gray-mid); min-height: 240px;">
+            <p class="tag mb-2" style="color: #391d4d !important; font-weight: 600;">En proceso
+            </p>
+            <p style="color:#391d4d; font-size:0.9rem;">
+              <br />¿Tu proyecto será el siguiente?
+            </p>
+            <a href="#contacto" class="btn-so mt-3">Conversemos</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- =============================================
        SOBRE MÍ
@@ -207,7 +281,7 @@
               REEMPLAZA este src con tu foto real.
               Ejemplo: src="img/susan-otarola.jpg"
             -->
-            <img src="./files/mi_foto.jpg" alt="Susan Otárola Jiménez — Comunicadora estratégica" />
+            <img src="./files/sobremi.png" alt="Susan Otárola Jiménez — Comunicadora estratégica" />
           </div>
         </div>
 
@@ -220,36 +294,37 @@
 
           <p>
             ¡Hola! Soy Susan. </p>
-          <p>Mi nombre tiene origen egipcio. Sí, aunque no lo creas...El símbolo es <em>sšn</em> y se pronuncia
-            <em>seshen</em> que significa "flor de loto".
-            Para los antiguos egipcios, la flor de loto representaba la creación y el
-            renacimiento porque la flor crece desde el lodo hacia la luz sin perder su forma.
-          </p>
-          <p> Eso es exactamente lo que hago con las marcas: <strong>encuentro su esencia para
+          <p>Mi nombre proviene del egipcio 
+            <em>sšn</em>, que se pronuncia
+            <em>seshen</em>, es decir,"flor de loto". Es una flor que emerge de la oscuridad para
+             renovarse con la luz. Conocer la raíz de mi nombre me ayudó a entender mi propósito,
+              y eso es exactamente lo que hago con las marcas: <strong>encuentro su esencia
+              para
               traducirla en voz e imagen,</strong>
             y así, con claridad y belleza, darle un nuevo
-            propósito.</p>
-
-          <p>
+            propósito. Ahora la flor es un símbolo en mi marca personal.</p>
+                      </p>
+                      <p>
             Soy
             <strong> comunicadora, diseñadora UX y locutora profesional. </strong>
             Aporto una sólida trayectoria de más de 15 años en la gestión de contenidos y
-            proyectos de comunicación, combinada con competencias técnicas contemporáneas para crear <strong>
+            proyectos de comunicación, combinada con competencias técnicas contemporáneas 
+            para crear <strong>
               experiencias digitales completas.</strong>
           </p>
-          <p> Te propongo que juntos analicemos el entorno de tu marca y creemos un
-            sistema que, con estrategia,
+          <p> Analicemos el entorno de tu marca y creemos un
+            sistema estratégico que
             <strong>integre la imagen, la voz y el diseño </strong>
-            y sea capaz de
-            hablar con el cliente en su mismo idioma.
+            para
+            hablar con tu cliente en su mismo idioma.
           </p>
 
           <div class="sobre-mi-pillars mt-4">
             <span class="pillar-tag">Diseño Gráfico UX/UI </span>
-            <span class="pillar-tag">Identidad visual para tu Marca</span>
+            <span class="pillar-tag">Identidad visual</span>
             <span class="pillar-tag">Comunicación </span>
             <span class="pillar-tag">Locución profesional</span>
-
+            <span class="pillar-tag">Producción audiovisual</span>
           </div>
         </div>
 
@@ -257,66 +332,7 @@
     </div>
   </section>
 
-  <!-- =============================================
-       PORTAFOLIO
-  ============================================= -->
-  <section id="portafolio">
-    <div class="container">
-      <div class="row mb-5 reveal">
-        <div class="col-lg-7">
-          <p class="tag">Conoce mis proyectos</p>
-           <h2 style="color:#391d4d;">Portafolio</h2>
-        </div>
-      </div>
 
-      <div class="row g-3">
-
-        <!-- Card 1 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="portfolio-card">
-            <img src="./comaqui/portada.png" alt="Identidad visual — Comaqui Restaurant" />
-            <div class="portfolio-overlay">
-              <a href="comaqui.html" target="_blank" class="btn-so btn-so--light">App Comaqui restaurant</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="portfolio-card">
-            <img src="./galleta/valla.png" alt="Pituki — Empaque y branding" />
-            <div class="portfolio-overlay">
-              <a href="pituki.html" target="_blank" class="btn-so btn-so--light">Pituki: packaging y publicidad</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-6 col-lg-4 reveal">
-          <div class="portfolio-card">
-            <img src="./facil/anuncio.jpg" alt="Davibank — Presentación corporativa" />
-            <div class="portfolio-overlay">
-              <a href="facilyrico.html" target="_blank" class="btn-so btn-so--light">App reservaciones gastronómicas</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 — Placeholder -->
-        <div class="col-md-6 col-lg-4 reveal d-flex align-items-stretch">
-          <div class="w-100 d-flex flex-column align-items-center justify-content-center text-center p-4"
-            style="border: 2px dashed var(--gray-mid); min-height: 240px;">
-                 <p class="tag mb-2" style="color: #391d4d !important; font-weight: 600;">Próximamente</p>
-            <p style="color:#391d4d; font-size:0.9rem;">
-              Nuevo proyecto en proceso.<br />¿Será el tuyo?
-            </p>
-            <a href="#contacto" class="btn-so mt-3">Conversemos</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
 
   <!-- =============================================
@@ -361,9 +377,9 @@
                 <label class="form-label" for="servicio">¿Qué necesitas?</label>
                 <select class="form-select" id="servicio" name="servicio">
                   <option value="" disabled selected>Selecciona un servicio</option>
-                  <option>Diseño Gráfico UX/UI</option>
-                  <option>Diseño de Identidad Visual</option>
-                  <option>Locución / Voz Profesional</option>
+                  <option>Diseño Gráfico</option>
+                  <option>Identidad Visual</option>
+                  <option>Video/locución </option>
                   <option>Varios </option>
                   <option>No sé por dónde empezar</option>
                 </select>
@@ -386,7 +402,18 @@
 
         </div>
       </div>
+      
     </div>
+      <!-- =============================================
+       whatsapp button
+  ============================================= -->
+    <a href="https://wa.me/50685584059" class="whatsapp-btn-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.445.099-.133.197-.513.646-.629.776-.117.133-.232.148-.43.05-.197-.099-.834-.308-1.587-.979-.586-.523-.982-1.17-1.097-1.368-.116-.197-.012-.304.086-.402.088-.088.197-.232.296-.348.1-.116.133-.197.197-.33.066-.133.033-.248-.016-.347-.05-.099-.445-1.077-.61-1.47-.16-.386-.324-.334-.445-.34-.116-.006-.248-.007-.38-.007a.728.728 0 0 0-.529.247c-.182.198-.691.676-.691 1.648 0 .973.708 1.913.807 2.046.099.133 1.393 2.128 3.375 2.982.471.203.839.324 1.126.416.474.152.905.131 1.246.08.38-.058 1.17-.478 1.338-.94.168-.463.168-.86.118-.94-.05-.08-.182-.132-.379-.231z" />
+        </svg>
+      </a>
   </section>
 
 
@@ -400,15 +427,11 @@
         <a href="https://www.linkedin.com/in/susanotarola" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
-        <a href="#" aria-label="YouTube">
-          <i class="bi bi-youtube"></i>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
+
+
       </div>
       <p class="footer-copy">
-        © 2026 Susan Otárola Jiménez · Diseño gráfico UX/UI · Identidad visual · Producción audiovisual
+        © 2026 Susan Otárola Jiménez · Diseño y comunicación
       </p>
     </div>
   </footer>
