@@ -177,11 +177,33 @@ p { font-weight: 400; }
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, rgba(57,29,77,0.85) 50%, rgba(57,29,77,0.55));
+ display: none;
+}
 }
 
 .hero-content { position: relative; z-index: 2; }
 .hero-content h2 { color: var(--ivory); margin-bottom: 1.4rem; }
 .hero-content .lead { color: var(--gray-mid); max-width: 580px; }
+
+.hero-foto {
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+.hero-foto img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .hero-foto { max-width: 280px; }
+}
 
 /* ---------- Servicios & Proceso ---------- */
 #servicios {
@@ -215,6 +237,9 @@ p { font-weight: 400; }
 .servicio-icon { font-size: 2rem; color: var(--sage); margin-bottom: 1rem; }
 .servicio-card h3 { color: var(--ivory); font-size: 1.3rem; margin-bottom: 0.6rem; }
 .servicio-card p { color: var(--gray-mid); font-size: 0.92rem; }
+.servicio-card ul { color: var(--gray-mid); font-size: 0.92rem; }
+.servicio-card ul li { margin-bottom: 0.4rem; }
+.servicio-card ul li:last-child { margin-bottom: 0; }
 
 /* Proceso */
 .proceso-wrap {
@@ -251,6 +276,7 @@ p { font-weight: 400; }
   display: inline-block;
   margin: 0.2rem;
 }
+
 
 /* ---------- Portafolio ---------- */
 #portafolio { padding: 6rem 0; background: var(--white); }
@@ -338,4 +364,45 @@ p { font-weight: 400; }
 .servicios-content {
   position: relative;
   z-index: 3; /* Asegura que el texto quede por encima de la imagen y el tinte */
+}
+/* ---------- Control de tamaño de texto (accesibilidad) ---------- */
+html.font-small  { font-size: 87.5%; }   /* ≈14px */
+html.font-medium { font-size: 100%; }    /* 16px, tamaño base */
+html.font-large  { font-size: 115%; }    /* ≈18.4px */
+
+/* boton flotante whatsapp */
+.whatsapp-btn-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.whatsapp-btn-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #391d4d;
+  border-radius: 50%;
+  padding: 1.5rem;
+  background-size: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #391d4d;
 }
