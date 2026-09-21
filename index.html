@@ -63,37 +63,44 @@
   </nav>
 
 
-  <!-- =============================================
-       HERO — Parallax
-  ============================================= -->
-  <section id="hero">
-    <div class="hero-parallax-bg" id="heroBg"></div>
-    <div class="hero-overlay"></div>
+ <!-- =============================================
+     HERO — Parallax
+============================================= -->
+<section id="hero">
+  <!-- Agregamos la ruta de la imagen de fondo directamente aquí -->
+  <div class="hero-parallax-bg" id="heroBg" style="background-image: url('./files/imageHero.png');"></div>
+  <div class="hero-overlay"></div>
 
-    <div class="container hero-content">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-
-          <h2>
-            Hago que tu marca se vea, se entienda y transmita su verdadero valor
-          </h2>
-
-        </div>
-
-        <div class="col-lg-5">
-          <div class="hero-foto">
-            <!--
-              REEMPLAZA este src con tu foto real.
-              Ejemplo: src="./files/susan-hero.jpg"
-            -->
-
-          </div>
+  <div class="container hero-content">
+    <div class="row align-items-center g-5">
+      
+       <!-- Foto (Derecha) -->
+      <div class="col-md-5 col-lg-4 reveal">
+        <div class="hero-foto">
+          <img src="./files/mi_foto.jpg" alt="Susan Otárola Jiménez" />
         </div>
       </div>
+      
+      <!-- Texto y Tags (Izquierda) -->
+      <div class="col-md-7 col-lg-8 reveal">
+        <h2>
+          Hago que tu marca se vea, se entienda y transmita su verdadero valor
+        </h2>
+
+        <div class="hero-pillars mt-4">
+          <span class="pillar-tag">Diseño Gráfico UX/UI</span>
+          <span class="pillar-tag">Identidad visual</span>
+          <span class="pillar-tag">Comunicación</span>
+          <span class="pillar-tag">Locución profesional</span>
+          <span class="pillar-tag">Producción audiovisual</span>
+        </div>
+      </div>
+
+     
+
     </div>
-
-  </section>
-
+  </div>
+</section>
   <!-- =============================================
        SERVICIOS + PROCESO — Parallax strip
   ============================================= -->
@@ -211,7 +218,6 @@
       </div>
     </div>
   </section>
-  
   <!-- =============================================
        PORTAFOLIO
   ============================================= -->
@@ -333,7 +339,7 @@
     </div>
   </section>
 
-  <!-- =============================================
+ <!-- =============================================
        CONTACTO — Parallax CTA
   ============================================= -->
   <section id="contacto">
@@ -343,7 +349,7 @@
     <div class="container contacto-content">
       <div class="row justify-content-center">
         <div class="col-lg-8 reveal">
-          <p class="tag">¿Listo para empezar?</p>
+          <p class="tag">¿Quieres empezar?</p>
           <h2>Cuéntame tu proyecto</h2>
           <p>
             Cada marca tiene una historia única. Cuéntame la tuya y
@@ -401,7 +407,7 @@
         </div>
       </div>
 
-    <!-- =============================================
+      <!-- =============================================
            Botón de WhatsApp (Líneas y letras en blanco)
       ============================================= -->
        <a href="https://api.whatsapp.com/send?phone=50685584059" 
@@ -414,6 +420,9 @@
                   </a>
     </div>
   </section>
+
+
+
   <!-- =============================================
        FOOTER
   ============================================= -->
