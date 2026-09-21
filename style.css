@@ -1,22 +1,24 @@
 /* ============================================================
-   SUSAN OTÁROLA JIMÉNEZ — Landing Page (Corregido)
+   SUSAN OTÁROLA JIMÉNEZ — Sistema de Diseño y Estilos
    ============================================= */
 
-/* ---------- Variables ---------- */
+/* ---------- Variables Globales ---------- */
 :root {
   --violet:    #391d4d;
+  --violet-dark: #1a0e23;
   --red:       #dd3149;
   --sage:      #89a8a3;
   --ivory:     #ededed;
+  --gray-light:#f7f6f4;
   --gray-mid:  #d3d3d3;
-  --gray-dark: #b2b2b2;
+  --gray-dark: #666666;
   --white:     #ffffff;
   --black:     #111111;
 
-  --ff-display: 'Jost', system-ui, -apple-system, sans-serif;
-  --ff-body:    'Jost', system-ui, -apple-system, sans-serif;
-
-  --transition: 0.3s ease;
+  --ff-main:    'Jost', system-ui, -apple-system, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --shadow-sm:  0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg:  0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------- Reset & Base ---------- */
@@ -25,7 +27,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--ff-body);
+  font-family: var(--ff-main);
   font-size: 1rem;
   color: var(--black);
   background-color: var(--white);
@@ -36,78 +38,74 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 
-/* Protegemos los iconos de Bootstrap para que no pierdan su fuente */
+/* Iconos Bootstrap */
 .bi, [class^="bi-"], [class*=" bi-"] {
   font-family: bootstrap-icons !important;
 }
 
-/* Encabezados y Tipografía Global Jost */
+/* Tipografía Global */
 h1, h2, h3, h4, h5, h6, 
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-  font-family: var(--ff-display);
+  font-family: var(--ff-main);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 h1, .display-4 {
-  font-size: clamp(3rem, 7vw, 5.5rem) !important;
-  line-height: 1.1 !important;
+  font-size: clamp(2.2rem, 5vw, 3.8rem) !important;
+  line-height: 1.15 !important;
 }
 
 p, span, a, li, input, textarea, select, button, label {
-  font-family: var(--ff-body);
+  font-family: var(--ff-main);
 }
 
 p { font-weight: 400; }
 .lead { font-weight: 300; }
 
 .tag {
-  font-family: var(--ff-body);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--sage);
 }
 
-/* ---------- Botones ---------- */
+/* ---------- Componentes: Botones ---------- */
 .btn-so {
   border-radius: 30px;
-  display: inline-block;
-  width: fit-content;
-  padding: 0.75rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.8rem;
   border: 2px solid var(--red);
   color: var(--red);
   font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: var(--transition);
   cursor: pointer;
   background: transparent;
 }
-.btn-so:hover { background: var(--red); color: var(--white); }
+.btn-so:hover { background: var(--red); color: var(--white); transform: translateY(-2px); }
 .btn-so--filled { background: var(--red); color: var(--white); }
 .btn-so--filled:hover { background: transparent; color: var(--red); }
 .btn-so--light { border-color: var(--ivory); color: var(--ivory); }
 .btn-so--light:hover { background: var(--ivory); color: var(--violet); }
 
-/* ---------- Barra Superior Accesibilidad ---------- */
+/* ---------- Accesibilidad & Navbar ---------- */
 .top-bar {
   position: relative;
   z-index: 1040;
-  background-color: #f7f6f4;
+  background-color: var(--gray-light);
   padding: 6px 16px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.font-size-control {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
+.font-size-control { display: flex; align-items: center; gap: 6px; }
 
 .font-btn {
   background: transparent;
@@ -123,48 +121,44 @@ p { font-weight: 400; }
   cursor: pointer;
   transition: var(--transition);
 }
-.font-btn:hover, .font-btn.active {
-  background: var(--sage);
-  color: var(--violet);
-}
+.font-btn:hover, .font-btn.active { background: var(--sage); color: var(--violet); }
 
-/* ---------- Navbar ---------- */
 #navbar {
   position: sticky;
   top: 0;
   z-index: 1030;
   width: 100%;
   padding: 12px 0;
-  background-color: #ffffff;
-  transition: all 0.3s ease;
+  background-color: var(--white);
+  transition: var(--transition);
 }
 
 #navbar.scrolled {
-  background: var(--ivory);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar-brand img { height: 40px !important; width: auto; }
 
 .navbar-nav .nav-link {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--violet) !important;
-  padding: 0.4rem 1rem !important;
+  padding: 0.5rem 1rem !important;
   transition: color var(--transition);
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--red) !important;
-}
+.navbar-nav .nav-link.active { color: var(--red) !important; }
 
-/* ---------- Hero Section ---------- */
+/* ---------- Secciones Principales ---------- */
+/* Hero Home */
 #hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background-image: url('./files/imageHero.png');
@@ -176,233 +170,180 @@ p { font-weight: 400; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(57,29,77,0.85) 50%, rgba(57,29,77,0.55));
- display: none;
-}
+  background: linear-gradient(135deg, rgba(57, 29, 77, 0.9) 0%, rgba(57, 29, 77, 0.65) 100%);
 }
 
 .hero-content { position: relative; z-index: 2; }
 .hero-content h2 { color: var(--ivory); margin-bottom: 1.4rem; }
-.hero-content .lead { color: var(--gray-mid); max-width: 580px; }
 
-.hero-foto {
-  width: 100%;
-  max-width: 380px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-}
-.hero-foto img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  display: block;
-}
-@media (max-width: 991.98px) {
-  .hero-foto { max-width: 280px; }
-}
-
-/* ---------- Servicios & Proceso ---------- */
+/* Servicios & Tarjetas */
 #servicios {
   position: relative;
-  padding: 6rem 0;
+  padding: 5rem 0;
   background-color: var(--violet);
-}
-
-.servicios-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(57,29,77,0.85);
-}
-
-.servicios-content { position: relative; z-index: 2; }
-.servicios-content .intro { color: var(--gray-mid); }
-
-.servicio-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
-  padding: 2rem 1.8rem;
-  border-radius: 12px;
-  height: 100%;
-  transition: var(--transition);
-}
-.servicio-card:hover {
-  border-color: #89a8a3;
-  background: rgba(137,168,163,0.1);
-}
-
-.servicio-icon { font-size: 2rem; color: var(--sage); margin-bottom: 1rem; }
-.servicio-card h3 { color: var(--ivory); font-size: 1.3rem; margin-bottom: 0.6rem; }
-.servicio-card p { color: var(--gray-mid); font-size: 0.92rem; }
-.servicio-card ul { color: var(--gray-mid); font-size: 0.92rem; }
-.servicio-card ul li { margin-bottom: 0.4rem; }
-.servicio-card ul li:last-child { margin-bottom: 0; }
-
-/* Proceso */
-.proceso-wrap {
-  background: var(--ivory);
-  border-radius: 24px;
-  padding: 3rem 2rem;
-  margin-top: 4rem;
-}
-
-.paso-num {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--sage);
-  min-width: 60px;
-}
-
-.paso-body h3 { color: var(--violet); font-size: 1.3rem; }
-.paso-body p { color: #444; }
-
-/* ---------- Sobre mí ---------- */
-#sobre-mi { padding: 6rem 0; background: var(--white); }
-.sobre-mi-texto h2 { color: var(--violet); }
-.sobre-mi-texto p { color: #444; }
-
-.pillar-tag {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.85rem;
-  border: 1px solid var(--violet);
-  color: var(--violet);
-  border-radius: 20px;
-  display: inline-block;
-  margin: 0.2rem;
-}
-
-
-/* ---------- Portafolio ---------- */
-#portafolio { padding: 6rem 0; background: var(--white); }
-.portfolio-card { position: relative; overflow: hidden; border-radius: 12px; width: 100%; min-height: 280px; background-color: var(--violet);}
-.portfolio-card img { width: 100%; height: 280px; aspect-ratio: 4/3; object-fit: cover; display: block; transition: transform 0.4s ease; }
-.portfolio-card:hover img { transform: scale(1.05); }
-
-.portfolio-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(57,29,77,0.88) 0%, rgba (57,29,77,0.2) 60%, transparent 100%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 1.5rem 1rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.portfolio-card:hover .portfolio-overlay { opacity: 1; }
-
-/* ---------- Contacto ---------- */
-#contacto {
-  position: relative;
-  padding: 6rem 0;
-  background-color: var(--violet);
-}
-
-.contacto-overlay { position: absolute; inset: 0; background: rgba(57,29,77,0.9); }
-.contacto-content { position: relative; z-index: 2; }
-.contacto-content h2 { color: var(--ivory); }
-.contacto-content p { color: var(--gray-mid); }
-
-.form-so .form-control, .form-so .form-select {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: var(--ivory);
-  padding: 0.8rem 1rem;
-}
-.form-so .form-control::placeholder { color: rgba(255, 255, 255, 0.75) !important; }
-.form-so .form-label { color: var(--sage); font-size: 0.75rem; text-transform: uppercase; }
-
-/* ---------- Footer ---------- */
-#footer { background: #1a0e23; padding: 2.5rem 0; text-align: center; color: var(--gray-dark); }
-.footer-brand { font-size: 1.4rem; color: var(--ivory); }
-.footer-brand span { color: var(--red); }
-.footer-social a { color: var(--gray-dark); font-size: 1.2rem; margin: 0 0.5rem; }
-.footer-social a:hover { color: var(--sage); }
-
-/* ---------- Corrección para visibilidad inmediata ---------- */
-.reveal {
-  opacity: 1 !important;
-  transform: none !important;
-}
-#servicios {
-  position: relative;
   overflow: hidden;
-  padding: 6rem 0;
-  background-color: #391d4d; /* Fondo de respaldo por si tarda en cargar */
 }
 
 .servicios-parallax-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 130%; /* Altura extra para permitir el desplazamiento del parallax */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  top: 0; left: 0; width: 100%; height: 130%;
+  background-size: cover; background-position: center;
   z-index: 1;
-  will-change: transform;
 }
 
 .servicios-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(57, 29, 77, 0.75); /* Tinte morado sobre la imagen */
+  position: absolute; inset: 0;
+  background: rgba(57, 29, 77, 0.82);
   z-index: 2;
-  pointer-events: none;
 }
 
-.servicios-content {
+.servicios-content { position: relative; z-index: 3; }
+
+.servicio-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2.2rem 1.8rem;
+  border-radius: 16px;
+  height: 100%;
+  transition: var(--transition);
+}
+.servicio-card:hover {
+  border-color: var(--sage);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+.servicio-icon { font-size: 2rem; color: var(--sage); margin-bottom: 1rem; }
+.servicio-card h3 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+
+/* Proceso */
+.proceso-wrap {
+  background: var(--ivory);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+}
+
+.proceso-step { display: flex; gap: 1.5rem; margin-bottom: 2rem; }
+.paso-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--sage);
+  line-height: 1;
+}
+.paso-body h3 { color: var(--violet); font-size: 1.25rem; }
+
+/* Sobre Mí */
+#sobre-mi { padding: 5rem 0; background: var(--white); }
+.sobre-mi-foto img { border-radius: 16px; box-shadow: var(--shadow-lg); }
+
+.pillar-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--violet);
+  color: var(--violet);
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+/* Portafolio */
+#portafolio { padding: 5rem 0; background: var(--white); }
+.portfolio-card {
   position: relative;
-  z-index: 3; /* Asegura que el texto quede por encima de la imagen y el tinte */
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--violet);
+  box-shadow: var(--shadow-sm);
 }
-/* ---------- Control de tamaño de texto (accesibilidad) ---------- */
-html.font-small  { font-size: 87.5%; }   /* ≈14px */
-html.font-medium { font-size: 100%; }    /* 16px, tamaño base */
-html.font-large  { font-size: 115%; }    /* ≈18.4px */
+.portfolio-card img {
+  width: 100%; height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.portfolio-card:hover img { transform: scale(1.05); }
 
-/* boton flotante whatsapp */
-.whatsapp-btn-float {
+.portfolio-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(57,29,77,0.95) 0%, rgba(57,29,77,0.3) 100%);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 2rem 1rem; opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio-card:hover .portfolio-overlay { opacity: 1; }
+
+/* Formulario Contacto */
+#contacto { position: relative; padding: 5rem 0; background-color: var(--violet); }
+.contacto-overlay { position: absolute; inset: 0; background: rgba(57, 29, 77, 0.92); }
+.contacto-content { position: relative; z-index: 2; }
+
+.form-so .form-control, .form-so .form-select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--ivory);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+}
+.form-so .form-control:focus, .form-so .form-select:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--sage);
+  box-shadow: none;
+  color: var(--white);
+}
+.form-so .form-control::placeholder { color: rgba(255, 255, 255, 0.65); }
+.form-so .form-label { color: var(--sage); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Custom Utilities para Subpáginas */
+.bg-custom-light { background-color: var(--ivory) !important; }
+.badge-custom { background-color: var(--ivory) !important; color: var(--violet) !important; font-weight: 600; }
+
+/* Botón Flotante de WhatsApp (Diseño Minimalista Elegante) */
+.whatsapp-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
-  background-color: #25D366;
-  color: #FFFFFF;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  bottom: 24px;
+  right: 24px;
   z-index: 9999;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
+  background-color: #13f164;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+.whatsapp-float:hover {
+  background-color: #28ab58;
+  border-color: #25D366;
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
 }
 
-/* Efecto al pasar el cursor (Hover) */
-.whatsapp-btn-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
-  color: #FFFFFF;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #391d4d;
-  border-radius: 50%;
-  padding: 1.5rem;
-  background-size: 50%;
-}
+/* Footer */
+#footer { background: var(--violet-dark); padding: 2.5rem 0; text-align: center; color: var(--gray-mid); }
+.footer-brand { font-size: 1.4rem; color: var(--ivory); font-weight: 700; }
+.footer-brand span { color: var(--red); }
+.footer-social a { color: var(--gray-mid); font-size: 1.25rem; margin: 0 0.5rem; transition: var(--transition); }
+.footer-social a:hover { color: var(--sage); }
 
-.carousel-indicators [data-bs-target] {
-  background-color: #391d4d;
+/* Control de Accesibilidad (Tamaños de fuente) */
+html.font-small  { font-size: 87.5%; }
+html.font-medium { font-size: 100%; }
+html.font-large  { font-size: 112.5%; }
+
+/* Scroll Reveal Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
