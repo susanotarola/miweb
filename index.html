@@ -4,20 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio — Susan Otárola</title>
-  <meta name="description" content="Portafolio de locución profesional y producción audiovisual." />
+  <title>Susan Otárola — Diseño gráfico UX/UI · Identidad visual · Locución profesional</title>
+  <meta name="description" content="Traduzco lo que ya eres. Ayudo a organizaciones y marcas personales a transmitir su valor mediante técnicas de comunicación, diseño y locución profesional. 
+    para que sean entendidas y recordadas." />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Solo Jost en todos sus pesos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- CSS personalizado -->
+  <!-- Tu CSS personalizado (¡siempre DESPUÉS de Bootstrap!) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -26,6 +30,7 @@
   <!-- =============================================
        NAVBAR
   ============================================= -->
+  <!-- Fila nueva, independiente, al inicio de todo -->
   <div class="top-bar">
     <div class="font-size-control" aria-label="Ajustar tamaño de texto">
       <button class="font-btn" data-size="small" aria-label="Tamaño de texto pequeño">A</button>
@@ -33,11 +38,12 @@
       <button class="font-btn" data-size="large" aria-label="Tamaño de texto grande">A</button>
     </div>
   </div>
-  
   <nav id="navbar" class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="files/monograma-8.png" alt="Susan Otárola" style="height: 40px;" />
+
+
+      <a class="navbar-brand" href="#hero">
+        <img src="./files/monograma-8.png" alt="Susan Otárola" style="height: 40px;" />
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
@@ -46,8 +52,8 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav gap-1">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
           <li class="nav-item ms-lg-2">
             <a class="nav-link btn-so px-3 py-1" href="#contacto">Conversemos</a>
           </li>
@@ -56,156 +62,300 @@
     </div>
   </nav>
 
+
  <!-- =============================================
-       HERO — PORTAFOLIO
-  ============================================= -->
-  <section id="hero-portafolio" class="position-relative overflow-hidden pt-5" style="background-color: #391d4d; min-height: 420px;">
-    <div class="hero-overlay" style="background: #391d4d; opacity: 0.85;"></div>
-    
-    <div class="container position-relative text-white h-100" style="z-index: 3;">
-      <div class="row align-items-end g-4 h-100">
-        
-        <!-- Texto principal (con padding inferior para alinearlo visualmente) -->
-        <div class="col-lg-6 reveal pb-5">
-          <h1 class="display-4 fw-bold text-white mb-3">Portafolio</h1>
-          <p class="lead text-light">
-            Aquí te muestro una variedad de trabajos que he realizado en materia de locución y producción audiovisual.
-          </p>
-
-          <div class="sobre-mi-pillars mt-3">
-            <a href="#audio" class="badge badge-custom px-3 py-2 fs-6 text-decoration-none me-2">Audio</a>
-            <a href="#video" class="badge badge-custom px-3 py-2 fs-6 text-decoration-none">Video</a>
-          </div>
-        </div>
-
-        <!-- Foto recortada pegada a la base -->
-        <div class="col-lg-6 text-center text-lg-end reveal d-flex align-items-end justify-content-center justify-content-lg-end">
-          <img src="./files/portafolio.png" alt="Susan con audífonos" class="img-fluid hero-foto-cut"
-            fetchpriority="high" decoding="async"
-            style="max-height: 420px; width: auto; display: block; margin-bottom: 0;" />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =============================================
-       SECCIÓN AUDIO: LOCUCIÓN PROFESIONAL
-  ============================================= -->
-  <section id="audio" class="py-4 bg-custom-light">
-    <div class="container">
+     HERO — Parallax
+============================================= -->
+<section id="hero">
+  <!-- Agregamos la ruta de la imagen de fondo directamente aquí -->
+    <div class="container hero-content">
+    <div class="row align-items-center g-5">
       
-      <!-- Encabezado -->
-      <div class="row mb-3 reveal">
-        <div class="col-lg-8">
-          <p class="tag text-uppercase fw-bold mb-1" style="color: #391d4d;">Audio</p>
-          <h2 class="display-6 fw-bold m-0" style="color: #391d4d;">Locución Profesional</h2>
-          <p class="mt-2 text-secondary">
-            La locución humana implica un trabajo técnico de interpretación vocal y sonido.
-            Tiene intención, tono, modulación y ritmo. Estas grabaciones se realizaron en estudio con micrófono profesional,
-            limpieza de audio y masterización de la voz.
-          </p>
+       <!-- Foto (Derecha) -->
+      <div class="col-md-5 col-lg-4 reveal">
+        <div class="hero-foto">
+          <img src="./files/mi_foto.jpg" alt="Susan Otárola Jiménez" />
         </div>
       </div>
 
-      <!-- Tarjetas de Video de Audio -->
-      <div class="row g-4 reveal">
-        <div class="col-md-6 col-lg-4">
-          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
-              <iframe src="https://www.youtube.com/embed/IZCrT4_7X_E" title="Demo locucion comercial" allowfullscreen></iframe>
-            </div>
-            <p class="text-center text-muted small fw-semibold m-0 mt-2">Demo locución comercial</p>
-          </div>
-        </div>
+      <!-- Texto y Tags (Izquierda) -->
+      <div class="col-md-7 col-lg-8 reveal">
+        <h2>
+          Hago que tu marca se vea, se entienda y transmita su verdadero valor
+        </h2>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
-              <iframe src="https://www.youtube.com/embed/USixUAvdRys" title="Demo animación de programa" allowfullscreen></iframe>
-            </div>
-            <p class="text-center text-muted small fw-semibold m-0 mt-2">Demo animación de programa</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
-              <iframe src="https://www.youtube.com/embed/rqlFCPLk0m4" title="Demo caracterizacion de personaje Coraline" allowfullscreen></iframe>
-            </div>
-            <p class="text-center text-muted small fw-semibold m-0 mt-2">Demo caracterización de personaje Coraline</p>
-          </div>
+        <div class="hero-pillars mt-4">
+          <span class="pillar-tag">Diseño Gráfico UX/UI</span>
+          <span class="pillar-tag">Identidad visual</span>
+          <span class="pillar-tag">Comunicación</span>
+          <span class="pillar-tag">Locución profesional</span>
+          <span class="pillar-tag">Producción audiovisual</span>
         </div>
       </div>
+
+     
 
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- =============================================
-       SECCIÓN VIDEO: CREACIONES AUDIOVISUALES
+       SERVICIOS + PROCESO — Parallax strip
   ============================================= -->
-  <section id="video" class="py-4 bg-custom-light border-top border-secondary border-opacity-10">
-    <div class="container">
+  <section id="servicios">
+    <!-- Capa de imagen Parallax -->
+    <div class="servicios-parallax-bg" id="serviciosBg" style="background-image: url('./galleta/fotomodelo.png');">
+    </div>
+    <!-- Capa oscura de superposición (Overlay) -->
+    <div class="servicios-overlay"></div>
 
-      <!-- Encabezado -->
-      <div class="row mb-3 reveal">
-        <div class="col-lg-8">
-          <p class="tag text-uppercase fw-bold mb-1" style="color: #391d4d;">Video</p>
-          <h2 class="display-6 fw-bold m-0" style="color: #391d4d;">Creaciones audiovisuales</h2>
-          <p class="mt-2 text-secondary">
-            Estos proyectos de producción audiovisual muestran un trabajo técnico cuyo propósito es darle imagen y voz a una idea. 
-            Inician con una idea, creación del guion, ir al sitio a conseguir el material ya sea realizar los videos o las fotos,
-            concertar la entrevista, realizar la grabación, editar el material en Adobe Premiere, y encontrar la música o canción adecuada.
+    <div class="container servicios-content">
+
+      <!-- ENCABEZADO DE SERVICIOS -->
+      <div class="row mb-5 reveal">
+        <div class="col-lg-7">
+          <h2 class="text-white">Servicios</h2>
+          <p class="intro text-light">
+            Ayudo a marcas, empresas y proyectos independientes a conectar con sus clientes mediante el diseño de
+            interfaces (UX/UI), identidad visual, piezas audiovisuales y redacción de contenidos.
           </p>
         </div>
       </div>
 
-      <!-- Tarjetas de Video -->
-      <div class="row g-4 reveal">
-        <div class="col-md-6 col-lg-4">
-          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
-              <iframe src="https://www.youtube.com/embed/Yy3GN51aMWE" title="Video cortina despedida de programa streaming" allowfullscreen></iframe>
-            </div>
-            <p class="text-center text-muted small fw-semibold m-0 mt-2">Cortinas para streaming</p>
+      <!-- TARJETAS DE SERVICIOS -->
+      <div class="row g-4 justify-content-center">
+         <!-- EMPRESAS -->
+        <div class="col-md-6 col-lg-6 reveal">
+<a href="empresas.html" class="text-decoration-none">
+          <div class="servicio-card H-100 p-4 rounded-4 shadow-sm text-dark">
+            <div class="servicio-icon"><i class="bi bi-mic"></i></div>
+            <h3 class="text-white">Comunicación para empresas</h3>
+            <ul class="text-light ps-3 mb-0">
+              <li>Capacitación sobre cómo hablar en público: mejora la expresión oral de tus colaboradores
+                utilizando principios de locución y estructuración de mensajes
+                utilizando técnicas de comunicación.</li>
+              <li>Diseño web y aplicaciones centradas en la conversión:
+                te ayudo a estructurar la información para que tus plataformas sean comprensibles
+                y fáciles de usar para que tus clientes no se pierdan
+                ni abandonen la compra.
+              </li>
+            </ul>
+            <br> <h6 style="color: #ffffff !important;"> Ver más </h6><br>
+           
           </div>
+        </a>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
-              <iframe src="https://www.youtube.com/embed/4-03gpFXwDg" title="Video proyecto musical" allowfullscreen></iframe>
-            </div>
-            <p class="text-center text-muted small fw-semibold m-0 mt-2">Proyecto en grupo video musical</p>
+<!-- Tarjeta 2: Emprendedores y Marcas Personales -->
+        <div class="col-md-6 col-lg-6 reveal">
+          <a href="pituki.html" class="text-decoration-none">
+          <div class="servicio-card">
+            <div class="servicio-icon"><i class="bi bi-palette"></i></div>
+            <h3 class="text-white">Comunicación para emprendedores y marcas personales</h3>
+            <ul class="text-light ps-3 mb-0">
+              <li>Estructuración del mensaje: te ayudo a estructurar el mensaje que expones en tus presentaciones, sitio
+                web y redes sociales.</li>
+              <li>Diseño de identidad visual: diseño tu marca (análisis de colores, estilo y logo) para que tu negocio
+                se vea profesional y transmita credibilidad.</li>
+              <li>Videos promocionales con voz profesional: ¿Quieres que tu marca cuente con producción
+                audiovisual? Te entrego el producto final creado
+                con un guion profesional y voz humana para enganchar a tu audiencia desde el primer segundo.
+              </li>
+            </ul>
+            <br> <h6 style="color: #ffffff !important;"> Ver más </h6><br>
+           
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="bg-white p-3 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-between">
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-2">
-              <iframe src="https://www.youtube.com/embed/YuXYtJLsx6g" title="Video de Historia religiosa" allowfullscreen></iframe>
-            </div>
-            <p class="text-center text-muted small fw-semibold m-0 mt-2">Historia religiosa</p>
-          </div>
+          </a>
         </div>
       </div>
 
+      <!-- ---- COMO TRABAJO (fondo claro) ---- -->
+      <div class="proceso-wrap mt-5 pt-5">
+        <div class="row mb-4 reveal">
+          <div class="col-lg-10">
+            <h2 style="color:#391d4d;">¿Cómo trabajo?</h2>
+          </div>
+        </div>
+
+        <div class="row g-lg-5">
+          <div class="col-lg-10">
+
+            <div class="proceso-step reveal">
+              <div class="paso-num">01</div>
+              <div class="paso-body">
+                <h3>Escucho y descubro</h3>
+                <p>
+                  Antes de proponer cualquier solución entiendo quién eres,
+                  a quién le hablas y qué quieres lograr. Esta fase incluye una entrevista,
+                  revisión de materiales existentes y diagnóstico honesto, importantes para
+                  definir el presupuesto y cronograma.
+                </p>
+              </div>
+            </div>
+
+            <div class="proceso-step reveal">
+              <div class="paso-num">02</div>
+              <div class="paso-body">
+                <h3>Diseño tu sistema de comunicación</h3>
+                <p>
+                  Combino técnicas de comunicación y diseño gráfico
+                  para sugerir la identidad visual, estilo,
+                  mensaje y piezas (web, branding, video o voz) para conformar un sistema coherente.
+                </p>
+              </div>
+            </div>
+
+            <div class="proceso-step reveal">
+              <div class="paso-num">03</div>
+              <div class="paso-body">
+                <h3>Entrega y autonomía</h3>
+                <p>
+                  Cuando estés satisfecho con el resultado, entrego materiales listos para usar y la guía para que
+                  puedas aplicarlos con total independencia si prefieres.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =============================================
+       PORTAFOLIO
+  ============================================= -->
+  <section id="portafolio">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-7">
+          <h2 style="color:#391d4d;">Veamos algunos ejemplos </h2>
+        </div>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="./files/reunion.png" alt="Identidad visual — Comaqui Restaurant" />
+            <div class="portfolio-overlay">
+              <a href="empresas.html" target="_blank" class="btn-so btn-so--light">Comunicación para empresas </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="./files/fotomodelo.png" alt="Pituki — Empaque y branding" />
+            <div class="portfolio-overlay">
+              <a href="pituki.html" target="_blank" class="btn-so btn-so--light">Comunicación para marca
+                emprendedora</a>
+            </div>
+          </div>
+        </div>
+
+ <!-- Card 3 -->
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="portfolio-card">
+            <img src="./files/portadaVideo.png" alt="Portafolio" />
+            <div class="portfolio-overlay">
+              <a href="portafolio.html" target="_blank" class="btn-so btn-so--light">Portafolio audiovisual
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 — Placeholder -->
+        <div class="col-md-6 col-lg-4 reveal d-flex align-items-stretch">
+          <div class="w-100 d-flex flex-column align-items-center justify-content-center text-center p-4"
+            style="border: 2px dashed var(--gray-mid); min-height: 240px;">
+            <p class="tag mb-2" style="color: #391d4d !important; font-weight: 600;">En proceso
+            </p>
+            <p style="color:#391d4d; font-size:0.9rem;">
+              <br />¿Tu proyecto será el siguiente?
+            </p>
+            <a href="#contacto" class="btn-so mt-3">Conversemos</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
+
+
   <!-- =============================================
+       SOBRE MÍ
+  ============================================= -->
+  <section id="sobre-mi">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Foto -->
+        <div class="col-md-5 col-lg-4 reveal">
+          <div class="sobre-mi-foto">
+            <!--
+              REEMPLAZA este src con tu foto real.
+              Ejemplo: src="img/susan-otarola.jpg"
+            -->
+            <img src="./files/sobremi.png" alt="Susan Otárola Jiménez — Comunicadora estratégica" />
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="col-md-7 col-lg-8 sobre-mi-texto reveal">
+          <p class="tag">Sobre mí</p>
+          <h2 style="color:#391d4d;">La comunicadora detrás de la marca</h2>
+
+          <div class="lotus-divider"><span>✦</span></div>
+
+          <p>
+            ¡Hola! Soy Susan. </p>
+          <p>Mi nombre proviene del egipcio 
+            <em>sšn</em>, que se pronuncia
+            <em>seshen</em>, es decir,"flor de loto". Es una flor que emerge de la oscuridad para
+             renovarse con la luz. Conocer la raíz de mi nombre me ayudó a entender mi propósito,
+              y eso es exactamente lo que hago con las marcas: <strong>encuentro su esencia
+              para
+              traducirla en voz e imagen,</strong>
+            y así, con claridad y belleza, darle un nuevo
+            propósito. Ahora la flor es un símbolo en mi marca personal.</p>
+                      </p>
+                      <p>
+            Soy
+            <strong> comunicadora, diseñadora UX y locutora profesional. </strong>
+            Aporto una sólida trayectoria de más de 15 años en la gestión de contenidos y
+            proyectos de comunicación, combinada con competencias técnicas contemporáneas 
+            para crear <strong>
+              experiencias digitales completas.</strong>
+          </p>
+          <p> Analicemos el entorno de tu marca y creemos un
+            sistema estratégico que
+            <strong>integre la imagen, la voz y el diseño </strong>
+            para
+            hablar con tu cliente en su mismo idioma.
+          </p>
+
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- =============================================
        CONTACTO — Parallax CTA
   ============================================= -->
-  <section id="contacto" class="py-5">
+  <section id="contacto">
     <div class="contacto-parallax-bg" id="contactoBg"></div>
     <div class="contacto-overlay"></div>
 
     <div class="container contacto-content">
       <div class="row justify-content-center">
-        <div class="col-lg-8 reveal text-center">
-          <p class="tag" style="color: #ffffff !important;">¿Listo para empezar?</p>
-          <h2 style="color: #ffffff !important;">Cuéntame tu proyecto</h2>
-          <p style="color: #ffffff !important;">
+        <div class="col-lg-8 reveal">
+          <p class="tag">¿Quieres empezar?</p>
+          <h2>Cuéntame tu proyecto</h2>
+          <p>
             Cada marca tiene una historia única. Cuéntame la tuya y
             trabajemos juntos para que el mundo la entienda y la recuerde.
           </p>
@@ -213,13 +363,14 @@
       </div>
 
       <!-- Formulario -->
-      <div class="row justify-content-center mt-3">
+      <div class="row justify-content-center mt-2">
         <div class="col-lg-7 reveal">
           <form class="form-so" action="https://formspree.io/f/meeblqqq" method="POST">
             <input type="hidden" name="_subject" value="Nuevo contacto desde tu web" />
             <input type="hidden" name="_next" value="https://susanotarola.github.io/miweb/#gracias" />
 
             <div class="row g-3">
+
               <div class="col-sm-6">
                 <label class="form-label" for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
@@ -237,7 +388,7 @@
                   <option>Diseño Gráfico UX/UI</option>
                   <option>Diseño de Identidad Visual</option>
                   <option>Locución / Voz Profesional</option>
-                  <option>Varios</option>
+                  <option>Varios </option>
                   <option>No sé por dónde empezar</option>
                 </select>
               </div>
@@ -248,24 +399,33 @@
                   placeholder="Describe brevemente tu proyecto o necesidad…" required></textarea>
               </div>
 
-              <div class="col-12 text-center mt-3">
+              <div class="col-12 text-center mt-2">
                 <button type="submit" class="btn-so btn-so--filled px-5">
                   Enviar mensaje
                 </button>
               </div>
+
             </div>
           </form>
+
         </div>
       </div>
 
-      <!-- Botón de WhatsApp -->
-      <a href="https://api.whatsapp.com/send?phone=50685584059" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 16 16">
-          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.445.099-.133.197-.513.646-.629.776-.117.133-.232.148-.43.05-.197-.099-.834-.308-1.587-.979-.586-.523-.982-1.17-1.097-1.368-.116-.197-.012-.304.086-.402.088-.088.197-.232.296-.348.1-.116.133-.197.197-.33.066-.133.033-.248-.016-.347-.05-.099-.445-1.077-.61-1.47-.16-.386-.324-.334-.445-.34-.116-.006-.248-.007-.38-.007a.728.728 0 0 0-.529.247c-.182.198-.691.676-.691 1.648 0 .973.708 1.913.807 2.046.099.133 1.393 2.128 3.375 2.982.471.203.839.324 1.126.416.474.152.905.131 1.246.08.38-.058 1.17-.478 1.338-.94.168-.463.168-.86.118-.94-.05-.08-.182-.132-.379-.231z" />
-        </svg>
-      </a>
+      <!-- =============================================
+           Botón de WhatsApp (Líneas y letras en blanco)
+      ============================================= -->
+       <a href="https://api.whatsapp.com/send?phone=50685584059" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="whatsapp-float">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.445.099-.133.197-.513.646-.629.776-.117.133-.232.148-.43.05-.197-.099-.834-.308-1.587-.979-.586-.523-.982-1.17-1.097-1.368-.116-.197-.012-.304.086-.402.088-.088.197-.232.296-.348.1-.116.133-.197.197-.33.066-.133.033-.248-.016-.347-.05-.099-.445-1.077-.61-1.47-.16-.386-.324-.334-.445-.34-.116-.006-.248-.007-.38-.007a.728.728 0 0 0-.529.247c-.182.198-.691.676-.691 1.648 0 .973.708 1.913.807 2.046.099.133 1.393 2.128 3.375 2.982.471.203.839.324 1.126.416.474.152.905.131 1.246.08.38-.058 1.17-.478 1.338-.94.168-.463.168-.86.118-.94-.05-.08-.182-.132-.379-.231z"/>
+          </svg>
+                  </a>
     </div>
   </section>
+
+
 
   <!-- =============================================
        FOOTER
@@ -277,6 +437,8 @@
         <a href="https://www.linkedin.com/in/susanotarola" target="_blank" rel="noopener" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
+
+
       </div>
       <p class="footer-copy">
         © 2026 Susan Otárola Jiménez · Diseño y comunicación
@@ -284,19 +446,40 @@
     </div>
   </footer>
 
+
   <!-- =============================================
        SCRIPTS
   ============================================= -->
+  <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    /* Navbar sólida con scroll */
+    /* ---- Navbar: se vuelve sólida al hacer scroll ---- */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    /* Scroll reveal */
+    /* ---- Parallax suave en capas de fondo ---- */
+    const heroBg = document.getElementById('heroBg');
+    const serviciosBg = document.getElementById('serviciosBg');
+    const contactoBg = document.getElementById('contactoBg');
+
+    function applyParallax(el, factor) {
+      if (!el) return;
+      const rect = el.parentElement.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+      const offset = (window.innerHeight / 2 - center) * factor;
+      el.style.transform = `translateY(${offset}px)`;
+    }
+
+    window.addEventListener('scroll', () => {
+      applyParallax(heroBg, 0.35);
+      applyParallax(serviciosBg, 0.25);
+      applyParallax(contactoBg, 0.25);
+    }, { passive: true });
+
+    /* ---- Scroll reveal ---- */
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -309,7 +492,23 @@
 
     reveals.forEach(el => observer.observe(el));
 
-    /* Control de tamaño de texto */
+    /* ---- Active nav link al hacer scroll ---- */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
+      });
+    }, { passive: true });
+  </script>
+
+  <script>
     const fontButtons = document.querySelectorAll('.font-btn');
     const html = document.documentElement;
 
